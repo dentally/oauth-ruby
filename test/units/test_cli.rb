@@ -1,4 +1,4 @@
-require File.expand_path('../../test_helper_units', __FILE__)
+require File.expand_path('../../test_helper', __FILE__)
 
 require 'oauth/cli'
 
@@ -58,7 +58,7 @@ class TestCLI < Minitest::Test
   def test_version
     out = run_command(%w[version])
 
-    assert_equal "OAuth for Ruby 0.5.1\n", out
+    assert_equal "OAuth Gem #{OAuth::VERSION}\n", out
   end
 
   def test_query_empty
